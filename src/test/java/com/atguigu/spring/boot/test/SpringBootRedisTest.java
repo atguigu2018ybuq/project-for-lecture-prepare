@@ -24,6 +24,11 @@ public class SpringBootRedisTest {
     private StringRedisTemplate stringRedisTemplate;
 
     @Test
+    public void test001() {
+        System.out.println("001");
+    }
+
+    @Test
     public void testZset() {
         ZSetOperations<String, String> operations = stringRedisTemplate.opsForZSet();
         Set<ZSetOperations.TypedTuple<String>> chengjiSet = operations.rangeWithScores("chengji", 0, -1);
